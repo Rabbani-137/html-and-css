@@ -1,0 +1,41 @@
+$(document).ready(function(){
+//Sticky Menu
+
+$(".js--services--section").waypoint(function(direction){
+    if(direction == "down"){
+        $("nav").addClass("sticky");
+
+    } else{
+        $("nav").removeClass("sticky");
+
+    }
+
+
+});
+
+//Active Link
+$("nav ul li a").click(function(){
+    $("nav ul li a").removeClass("active");
+    $(this).addClass("active");
+});
+
+$("nav a img.logo").click(function(){
+    $("nav ul li a").removeClass("active");
+    $("nav ul li:frist-child a").addClass("active");
+});
+
+
+
+    //MIZITUP (Portfolio Section)
+    var mixer = mixitup('.container');
+});
+
+
+
+
+function openNav(){
+    document.getElementById("myNav").style.width="100%";
+}
+function closeNav(){
+    document.getElementById("myNav").style.width="0%";
+}
